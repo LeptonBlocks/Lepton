@@ -1,0 +1,221 @@
+[
+    {
+        "eid": "31073",
+        "cid": "54370",
+        "name": "🚀 Initialize",
+        "opcode": "BLOCK_1712698492010",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [
+                    "\"src/Lepton-RTC-DS3231/DS3231.h\""
+                ],
+                "lib": "",
+                "declare": "DS3231 lepton_clock;\nRTCDateTime lepton_dt;",
+                "setup": "lepton_clock.begin();",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566194,
+        "modify_time": 1713192778,
+        "uid": 2276715,
+        "id": "521610"
+    },
+    {
+        "eid": "31073",
+        "cid": "54370",
+        "name": "✍️ Set date to Year @[Number](number) Month @[Number](number)  Day @[Number](number) Hour @[Number](number) Minute @[Number](number) Second @[Number](number)",
+        "opcode": "BLOCK_1713188274574",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockweb",
+            "mblockpc"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [],
+                "lib": "",
+                "declare": "",
+                "setup": "lepton_clock.setDateTime(/*{year}*/, /*{month}*/, /*{date}*/, /*{hour}*/, /*{minute}*/, /*{second}*/);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566161,
+        "modify_time": 1691566161,
+        "uid": 2276715,
+        "args": [
+            {
+                "type": "number",
+                "name": "year",
+                "val": 2024
+            },
+            {
+                "type": "number",
+                "name": "month",
+                "val": 12
+            },
+            {
+                "type": "number",
+                "name": "date",
+                "val": 31
+            },
+            {
+                "type": "number",
+                "name": "hour",
+                "val": 23
+            },
+            {
+                "type": "number",
+                "name": "minute",
+                "val": 59
+            },
+            {
+                "type": "number",
+                "name": "second",
+                "val": 59
+            }
+        ],
+        "id": "521611"
+    },
+    {
+        "eid": "31073",
+        "cid": "54370",
+        "name": "📖 Read date",
+        "opcode": "BLOCK_1713174673422",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [],
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_dt = lepton_clock.getDateTime();",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566161,
+        "modify_time": 1691566161,
+        "uid": 2276715,
+        "id": "521612"
+    },
+    {
+        "eid": "31073",
+        "cid": "54370",
+        "name": "Date item @[Dropdown](fieldMenu)  ",
+        "opcode": "BLOCK_1713175967062",
+        "blockType": "number",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_dt./*{field}*/",
+                "_loop": ""
+            }
+        },
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "field",
+                "val": "second",
+                "menus": [
+                    {
+                        "text": "year",
+                        "value": "year"
+                    },
+                    {
+                        "text": "month",
+                        "value": "month"
+                    },
+                    {
+                        "text": "day",
+                        "value": "day"
+                    },
+                    {
+                        "text": "hour",
+                        "value": "hour"
+                    },
+                    {
+                        "text": "minute",
+                        "value": "minute"
+                    },
+                    {
+                        "text": "second",
+                        "value": "second"
+                    },
+                    {
+                        "text": "day of week",
+                        "value": "dayOfWeek"
+                    },
+                    {
+                        "text": "seconds since 1970",
+                        "value": "unixtime"
+                    }
+                ]
+            }
+        ],
+        "create_time": 1691566161,
+        "modify_time": 1691566161,
+        "uid": 2276715,
+        "id": "521613"
+    }
+]

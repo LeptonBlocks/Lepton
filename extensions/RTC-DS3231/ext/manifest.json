@@ -1,0 +1,68 @@
+{
+    "id": "lepton_rtc_ds3231",
+    "iconURL": "lepton_rtc_ds3231/imgs/5180a94b_k.png",
+    "coverURL": "./res/5180a94b_k.png",
+    "name": {
+        "zh": "Lepton RTC DS3231",
+        "en": "Lepton RTC DS3231",
+        "de": "Lepton RTC DS3231",
+        "es": "Lepton RTC DS3231",
+        "fr": "Lepton RTC DS3231",
+        "id": "Lepton RTC DS3231",
+        "ja": "Lepton RTC DS3231",
+        "ja-jph": "Lepton RTC DS3231",
+        "ko": "Lepton RTC DS3231",
+        "pl": "Lepton RTC DS3231",
+        "uk": "Lepton RTC DS3231",
+        "zh-hant": "Lepton RTC DS3231",
+        "nl": "Lepton RTC DS3231",
+        "it": "Lepton RTC DS3231",
+        "hr": "Lepton RTC DS3231",
+        "ru": "Lepton RTC DS3231",
+        "pt": "Lepton RTC DS3231",
+        "fi": "Lepton RTC DS3231",
+        "tr": "Lepton RTC DS3231",
+        "tk": "Lepton RTC DS3231"
+    },
+    "description": {
+        "zh": "RTC DS3231 clock",
+        "en": "RTC DS3231 clock",
+        "de": "RTC DS3231 clock",
+        "es": "RTC DS3231 clock",
+        "fr": "RTC DS3231 clock",
+        "id": "RTC DS3231 clock",
+        "ja": "RTC DS3231 clock",
+        "ja-jph": "RTC DS3231 clock",
+        "ko": "RTC DS3231 clock",
+        "pl": "RTC DS3231 clock",
+        "uk": "RTC DS3231 clock",
+        "zh-hant": "RTC DS3231 clock",
+        "nl": "RTC DS3231 clock",
+        "it": "RTC DS3231 clock",
+        "hr": "RTC DS3231 clock",
+        "ru": "RTC DS3231 clock",
+        "pt": "RTC DS3231 clock",
+        "fi": "RTC DS3231 clock",
+        "tr": "RTC DS3231 clock",
+        "tk": "RTC DS3231 clock"
+    },
+    "targets": [
+        "arduino_uno"
+    ],
+    "main": "lepton_rtc_ds3231/index.js",
+    "codeTypes": [
+        "arduinoc"
+    ],
+    "device": false,
+    "sortId": 999,
+    "version": "0.0.1",
+    "extApiVersion": [],
+    "platform": [
+        "mblockpc",
+        "mblockweb"
+    ],
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
+    "feature": [
+        "worker"
+    ]
+}
