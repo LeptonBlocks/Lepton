@@ -1,0 +1,1090 @@
+[
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Define custom character @[Dropdown](fieldMenu) @[LED panel](facePanel) ",
+        "opcode": "BLOCK_1713210693769",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 0,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "n",
+                "menus": [
+                    {
+                        "text": "1",
+                        "value": "1"
+                    },
+                    {
+                        "text": "2",
+                        "value": "2"
+                    },
+                    {
+                        "text": "3",
+                        "value": "3"
+                    },
+                    {
+                        "text": "4",
+                        "value": "4"
+                    },
+                    {
+                        "text": "5",
+                        "value": "5"
+                    },
+                    {
+                        "text": "6",
+                        "value": "6"
+                    },
+                    {
+                        "text": "7",
+                        "value": "7"
+                    },
+                    {
+                        "text": "8",
+                        "value": "8"
+                    }
+                ],
+                "val": "1"
+            },
+            {
+                "type": "facePanel",
+                "name": "panel",
+                "val": "cd72e514"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd_panel(\"/*{panel}*/\");\nlepton_lcd.createChar(/*{n}*/-1, lepton_lcd_custom_char);\nlepton_lcd.setCursor(0, 0); // required after createChar, for some reason, otherwise no display",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558122,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548768"
+    },
+    {
+        "eid": "32357",
+        "cid": "57146",
+        "name": "Init #@[Number](number) DIN: @[Number](number)  CS: @[Number](number) CLK: @[Number](number) Panels (1-8): @[Number](number) ",
+        "opcode": "BLOCK_1719039285417",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "548770",
+        "sort": 0,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [
+                    "\"src/Lepton-MAX7219/LedControl.h\""
+                ],
+                "lib": "",
+                "declare": "LedControl lepton_ledcontrol/*{num}*/ = LedControl(/*{din}*/, /*{clk}*/, /*{cs}*/, /*{panels}*/);",
+                "setup": "for(int lepton_i=0; lepton_i<lepton_ledcontrol/*{num}*/.getDeviceCount(); lepton_i++) {\n    /* Wake up device */\n    lepton_ledcontrol/*{num}*/.shutdown(lepton_i, false); \n    /* Set the brightness to a medium value */\n    lepton_ledcontrol/*{num}*/.setIntensity(lepton_i, 8);\n    /* and clear the display */\n    lepton_ledcontrol/*{num}*/.clearDisplay(lepton_i);\n} \n\nlepton_ledcontrol/*{num}*/.setRow(1,0,63);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "args": [
+            {
+                "type": "number",
+                "name": "num",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "din",
+                "val": 12
+            },
+            {
+                "type": "number",
+                "name": "cs",
+                "val": 11
+            },
+            {
+                "type": "number",
+                "name": "clk",
+                "val": 10
+            },
+            {
+                "type": "number",
+                "name": "panels",
+                "val": 1
+            }
+        ],
+        "create_time": 1717558122,
+        "modify_time": 1719044938,
+        "uid": 2276715
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "🚀 Initialize Address @[Dropdown](fieldMenu) Columns @[Number](number) Rows @[Number](number) ",
+        "opcode": "BLOCK_1713207948139",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 1,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [
+                    "\"I2C_LCD/I2C_LCD.h\"",
+                    "\"I2C_LCD/I2C_LCD_special_chars.h\""
+                ],
+                "lib": "",
+                "declare": "I2C_LCD lepton_lcd(/*{port}*/);\n\nuint8_t lepton_lcd_custom_char[8]; // Fixed size for 8 elements\n\nvoid lepton_lcd_panel(const char* binaryStr) {\n    // Reset the array to all zeroes\n    for (int i = 0; i < 8; ++i) {\n        lepton_lcd_custom_char[i] = 0;\n    }\n\n    for (int i = 0; i < 40; i++) {\n        // Calculate the row and column indices\n        int row = i % 8;\n        int col = 4 - i / 8;\n\n        // Convert the character '0' or '1' to a bit\n        uint8_t bit = (binaryStr[i] == '1') ? 1 : 0;\n\n        // Set the corresponding bit in the result array\n        lepton_lcd_custom_char[row] |= (bit << col);\n    }\n}",
+                "setup": "lepton_lcd.begin(/*{columns}*/, /*{rows}*/);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "port",
+                "val": "0x27",
+                "menus": [
+                    {
+                        "text": "0x20",
+                        "value": "0x20"
+                    },
+                    {
+                        "text": "0x27",
+                        "value": "0x27"
+                    },
+                    {
+                        "text": "0x30",
+                        "value": "0x30"
+                    },
+                    {
+                        "text": "0x38",
+                        "value": "0x38"
+                    },
+                    {
+                        "text": "0x3F",
+                        "value": "0x3F"
+                    }
+                ]
+            },
+            {
+                "type": "number",
+                "name": "columns",
+                "val": 16
+            },
+            {
+                "type": "number",
+                "name": "rows",
+                "val": 2
+            }
+        ],
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548760"
+    },
+    {
+        "eid": "32357",
+        "cid": "57146",
+        "name": "Draw #@[Number](number) Panel @[Number](number)   @[LED panel](facePanel) ",
+        "opcode": "BLOCK_1719040511271",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 1,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "number",
+                "name": "num",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "panel",
+                "val": 1
+            },
+            {
+                "type": "facePanel",
+                "name": "figure",
+                "val": "8233d424"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "for (int lepton_i = 0; lepton_i < 8; lepton_i++) {\n    char lepton_chunk[9];\n    strncpy(lepton_chunk, \"/*{figure}*/\" + lepton_i * 8, 8);\n    lepton_chunk[8] = '\\0';\n    lepton_ledcontrol/*{num}*/.setRow(/*{panel}*/-1, lepton_i, strtol(lepton_chunk, NULL, 2));\n}",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558122,
+        "modify_time": 1719044221,
+        "uid": 2276715,
+        "id": "548772"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Send command @[Dropdown](fieldMenu) ",
+        "opcode": "BLOCK_1713209371216",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 2,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "command",
+                "menus": [
+                    {
+                        "text": "clear screen and set cursor to (1, 1)",
+                        "value": "clear"
+                    },
+                    {
+                        "text": "clear line from current position",
+                        "value": "clearEOL"
+                    },
+                    {
+                        "text": "backlight on",
+                        "value": "backlight"
+                    },
+                    {
+                        "text": "backlight off and display off",
+                        "value": "noBacklight"
+                    },
+                    {
+                        "text": "display on",
+                        "value": "display"
+                    },
+                    {
+                        "text": "display off",
+                        "value": "noDisplay"
+                    },
+                    {
+                        "text": "blink on",
+                        "value": "blink"
+                    },
+                    {
+                        "text": "blink off",
+                        "value": "noBlink"
+                    },
+                    {
+                        "text": "cursor on",
+                        "value": "cursor"
+                    },
+                    {
+                        "text": "cursor off",
+                        "value": "noCursor"
+                    },
+                    {
+                        "text": "scroll display left",
+                        "value": "scrollDisplayLeft"
+                    },
+                    {
+                        "text": "scroll display reft",
+                        "value": "scrollDisplayRight"
+                    },
+                    {
+                        "text": "autoscroll on",
+                        "value": "autoscroll"
+                    },
+                    {
+                        "text": "autoscroll off",
+                        "value": "noAutoscroll"
+                    },
+                    {
+                        "text": "write left to right",
+                        "value": "leftToRight"
+                    },
+                    {
+                        "text": "write right to left",
+                        "value": "rightToLeft"
+                    }
+                ],
+                "val": "clear"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd./*{command}*/();",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548761"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Set cursor to row @[Number](number) column @[Number](number)",
+        "opcode": "BLOCK_1713210277889",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 3,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "number",
+                "name": "row",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "column",
+                "val": 1
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548762"
+    },
+    {
+        "eid": "32357",
+        "cid": "57146",
+        "name": "Set brightness #@[Number](number) Panel @[Number](number) value (0-15) @[Number](number) ",
+        "opcode": "BLOCK_1719044216290",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "548779",
+        "sort": 3,
+        "platform": [
+            "mblockpc"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "number",
+                "name": "num",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "panel",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "value",
+                "val": 1
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_ledcontrol/*{num}*/.setIntensity(/*{panel}*/-1, /*{value}*/);",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719044472,
+        "uid": 2276715
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Print @[String](string)",
+        "opcode": "BLOCK_1713210091134",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 4,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "string",
+                "name": "string",
+                "checkNumber": false,
+                "val": "text"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "lepton_lcd.print(/*{string}*/);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548763"
+    },
+    {
+        "eid": "32357",
+        "cid": "57146",
+        "name": "Turn #@[Number](number) Panel @[Number](number)  @[Dropdown](fieldMenu) ",
+        "opcode": "BLOCK_1719043487366",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "548777",
+        "sort": 4,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "number",
+                "name": "num",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "panel",
+                "val": 1
+            },
+            {
+                "type": "fieldMenu",
+                "name": "powerDown",
+                "menus": [
+                    {
+                        "text": "on",
+                        "value": "false"
+                    },
+                    {
+                        "text": "off",
+                        "value": "true"
+                    }
+                ],
+                "val": "true"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_ledcontrol/*{num}*/.shutdown(/*{panel}*/-1, /*{powerDown}*/);",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719044288,
+        "uid": 2276715
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Print @[String](string) centered on row @[Number](number) ",
+        "opcode": "BLOCK_1713210132755",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 5,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "string",
+                "name": "string",
+                "checkNumber": false,
+                "val": "text"
+            },
+            {
+                "type": "number",
+                "name": "row",
+                "val": 1
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "lepton_lcd.center(/*{row}*/-1, /*{string}*/);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558122,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548764"
+    },
+    {
+        "eid": "32357",
+        "cid": "57146",
+        "name": "Set LED #@[Number](number) Panel @[Number](number) row (1-8) @[Number](number) column (1-8) @[Number](number) @[Dropdown](fieldMenu) ",
+        "opcode": "BLOCK_1719043877542",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "548778",
+        "sort": 5,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "number",
+                "name": "num",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "panel",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "row",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "col",
+                "val": 1
+            },
+            {
+                "type": "fieldMenu",
+                "name": "on",
+                "val": "true",
+                "menus": [
+                    {
+                        "text": "on",
+                        "value": "true"
+                    },
+                    {
+                        "text": "off",
+                        "value": "false"
+                    }
+                ]
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_ledcontrol/*{num}*/.setLed(/*{panel}*/-1, /*{row}*/-1, /*{col}*/-1, /*{on}*/);",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719044221,
+        "uid": 2276715
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Print @[String](string) aligned right on row @[Number](number) column @[Number](number) ",
+        "opcode": "BLOCK_1713210192368",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 6,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "string",
+                "name": "string",
+                "checkNumber": false,
+                "val": "text"
+            },
+            {
+                "type": "number",
+                "name": "row",
+                "val": 1
+            },
+            {
+                "type": "number",
+                "name": "column",
+                "val": 16
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548765"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Move cursor @[Dropdown](fieldMenu) by @[Number](number)",
+        "opcode": "BLOCK_1713210317522",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 7,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "direction",
+                "menus": [
+                    {
+                        "text": "right",
+                        "value": "Right"
+                    },
+                    {
+                        "text": "left",
+                        "value": "Left"
+                    }
+                ],
+                "val": "Right"
+            },
+            {
+                "type": "number",
+                "name": "n",
+                "val": 1
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd.moveCursor/*{direction}*/(/*{n}*/);",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558134,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548766"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Print special character @[Dropdown](fieldMenu) ",
+        "opcode": "BLOCK_1713208634623",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 8,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "char",
+                "menus": [
+                    {
+                        "text": " α",
+                        "value": "ALPHA"
+                    },
+                    {
+                        "text": "β",
+                        "value": "BETA"
+                    },
+                    {
+                        "text": "ε",
+                        "value": "EPSILON"
+                    },
+                    {
+                        "text": "μ",
+                        "value": "MU"
+                    },
+                    {
+                        "text": "ρ",
+                        "value": "RHO"
+                    },
+                    {
+                        "text": "√",
+                        "value": "SQROOT"
+                    },
+                    {
+                        "text": "ϴ",
+                        "value": "THETA"
+                    },
+                    {
+                        "text": "∞",
+                        "value": "INFINITY"
+                    },
+                    {
+                        "text": "Ω",
+                        "value": "OHM"
+                    },
+                    {
+                        "text": "Σ",
+                        "value": "SIGMA"
+                    },
+                    {
+                        "text": "π",
+                        "value": "PI"
+                    },
+                    {
+                        "text": "x̄ ",
+                        "value": "XAVG"
+                    },
+                    {
+                        "text": "°",
+                        "value": "DEGREE"
+                    },
+                    {
+                        "text": "÷",
+                        "value": "DIVIDE"
+                    }
+                ],
+                "val": "DEGREE"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd.print(LCD_/*{char}*/);",
+                "_loop": ""
+            }
+        },
+        "create_time": 1718979650,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548767"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Print custom character @[Dropdown](fieldMenu) ",
+        "opcode": "BLOCK_1713211789499",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 9,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd.special(/*{n}*/-1);",
+                "_loop": ""
+            }
+        },
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "n",
+                "menus": [
+                    {
+                        "text": "1",
+                        "value": "1"
+                    },
+                    {
+                        "text": "2",
+                        "value": "2"
+                    },
+                    {
+                        "text": "3",
+                        "value": "3"
+                    },
+                    {
+                        "text": "4",
+                        "value": "4"
+                    },
+                    {
+                        "text": "5",
+                        "value": "5"
+                    },
+                    {
+                        "text": "6",
+                        "value": "6"
+                    },
+                    {
+                        "text": "7",
+                        "value": "7"
+                    },
+                    {
+                        "text": "8",
+                        "value": "8"
+                    }
+                ],
+                "val": "1"
+            }
+        ],
+        "create_time": 1718979650,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548769"
+    },
+    {
+        "eid": "32357",
+        "cid": "57145",
+        "name": "✍️ Define custom character @[Dropdown](fieldMenu) @[LED panel](facePanel)  copy",
+        "opcode": "BLOCK_1719040456908",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 10,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "args": [
+            {
+                "type": "fieldMenu",
+                "name": "n",
+                "menus": [
+                    {
+                        "text": "1",
+                        "value": "1"
+                    },
+                    {
+                        "text": "2",
+                        "value": "2"
+                    },
+                    {
+                        "text": "3",
+                        "value": "3"
+                    },
+                    {
+                        "text": "4",
+                        "value": "4"
+                    },
+                    {
+                        "text": "5",
+                        "value": "5"
+                    },
+                    {
+                        "text": "6",
+                        "value": "6"
+                    },
+                    {
+                        "text": "7",
+                        "value": "7"
+                    },
+                    {
+                        "text": "8",
+                        "value": "8"
+                    }
+                ],
+                "val": "1"
+            },
+            {
+                "type": "facePanel",
+                "name": "panel",
+                "val": "cd72e514"
+            }
+        ],
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_lcd_panel(\"/*{panel}*/\");\nlepton_lcd.createChar(/*{n}*/-1, lepton_lcd_custom_char);\nlepton_lcd.setCursor(0, 0); // required after createChar, for some reason, otherwise no display",
+                "_loop": ""
+            }
+        },
+        "create_time": 1717558122,
+        "modify_time": 1719040490,
+        "uid": 2276715,
+        "id": "548771"
+    }
+]
