@@ -1,0 +1,445 @@
+[
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "🚀 Initialize",
+        "opcode": "BLOCK_1712698492011",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 0,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [
+                    "\"src/IRremote.hpp\""
+                ],
+                "lib": "",
+                "declare": "const char* lepton_ir_protocols[] = {\n    \"UNKNOWN\",\n    \"PULSE_WIDTH\",\n    \"PULSE_DISTANCE\",\n    \"APPLE\",\n    \"DENON\",\n    \"JVC\",\n    \"LG\",\n    \"LG2\",\n    \"NEC\",\n    \"NEC2\",\n    \"ONKYO\",\n    \"PANASONIC\",\n    \"KASEIKYO\",\n    \"KASEIKYO_DENON\",\n    \"KASEIKYO_SHARP\",\n    \"KASEIKYO_JVC\",\n    \"KASEIKYO_MITSUBISHI\",\n    \"RC5\",\n    \"RC6\",\n    \"SAMSUNG\",\n    \"SAMSUNGLG\",\n    \"SAMSUNG48\",\n    \"SHARP\",\n    \"SONY\",\n    \"BANG_OLUFSEN\",\n    \"BOSEWAVE\",\n    \"LEGO_PF\",\n    \"MAGIQUEST\",\n    \"WHYNTER\",\n    \"FAST\"\n};\n\nconst int lepton_ir_protocols_num = sizeof(lepton_ir_protocols) / sizeof(lepton_ir_protocols[0]);\n\nString lepton_ir_protocols_to_string(int number) {\n    if (number >= 0 && number < lepton_ir_protocols_num) {\n        return String(lepton_ir_protocols[number]);\n    } else {\n        return \"OUT_OF_RANGE\";\n    }\n}",
+                "setup": " IrReceiver.begin(2, ENABLE_LED_FEEDBACK);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566161,
+        "modify_time": 1713202791,
+        "uid": 2276715,
+        "id": "521663"
+    },
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "Data received",
+        "opcode": "BLOCK_1713199958691",
+        "blockType": "boolean",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "521667",
+        "sort": 1,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.decode()",
+                "_loop": ""
+            }
+        },
+        "create_time": 1692637961,
+        "modify_time": 1713202205,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "Resume receiving data",
+        "opcode": "BLOCK_1713200086506",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "521669",
+        "sort": 2,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.resume();",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566194,
+        "modify_time": 1713202205,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "command",
+        "opcode": "BLOCK_1713199982245",
+        "blockType": "number",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "521668",
+        "sort": 3,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.decodedIRData.command",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566161,
+        "modify_time": 1713202205,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "protocol",
+        "opcode": "BLOCK_1713200599653",
+        "blockType": "string",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "521720",
+        "sort": 4,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_ir_protocols_to_string(IrReceiver.decodedIRData.protocol)",
+                "_loop": ""
+            }
+        },
+        "create_time": 1692637961,
+        "modify_time": 1713202601,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54375",
+        "name": "raw data",
+        "opcode": "BLOCK_1713200938836",
+        "blockType": "string",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "id": "521724",
+        "sort": 6,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "String(IrReceiver.decodedIRData.decodedRawData, HEX)",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566161,
+        "modify_time": 1713203166,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "🚀 Initialize pin @[Number](number) ",
+        "opcode": "BLOCK_1713216604395",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": [
+                    "\"src/IRremote.hpp\""
+                ],
+                "lib": "",
+                "declare": "const char* lepton_ir_protocols[] = {\n    \"UNKNOWN\",\n    \"PULSE_WIDTH\",\n    \"PULSE_DISTANCE\",\n    \"APPLE\",\n    \"DENON\",\n    \"JVC\",\n    \"LG\",\n    \"LG2\",\n    \"NEC\",\n    \"NEC2\",\n    \"ONKYO\",\n    \"PANASONIC\",\n    \"KASEIKYO\",\n    \"KASEIKYO_DENON\",\n    \"KASEIKYO_SHARP\",\n    \"KASEIKYO_JVC\",\n    \"KASEIKYO_MITSUBISHI\",\n    \"RC5\",\n    \"RC6\",\n    \"SAMSUNG\",\n    \"SAMSUNGLG\",\n    \"SAMSUNG48\",\n    \"SHARP\",\n    \"SONY\",\n    \"BANG_OLUFSEN\",\n    \"BOSEWAVE\",\n    \"LEGO_PF\",\n    \"MAGIQUEST\",\n    \"WHYNTER\",\n    \"FAST\"\n};\n\nconst int lepton_ir_protocols_num = sizeof(lepton_ir_protocols) / sizeof(lepton_ir_protocols[0]);\n\nString lepton_ir_protocols_to_string(int number) {\n    if (number >= 0 && number < lepton_ir_protocols_num) {\n        return String(lepton_ir_protocols[number]);\n    } else {\n        return \"OUT_OF_RANGE\";\n    }\n}",
+                "setup": " IrReceiver.begin(/*{pin}*/, ENABLE_LED_FEEDBACK);",
+                "code": "",
+                "_loop": ""
+            }
+        },
+        "create_time": 1691566194,
+        "modify_time": 1715272411,
+        "uid": 2276715,
+        "id": "521844",
+        "args": [
+            {
+                "type": "number",
+                "name": "pin",
+                "val": 2
+            }
+        ]
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "📖 Data received",
+        "opcode": "BLOCK_1713216604631",
+        "blockType": "boolean",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.decode()",
+                "_loop": ""
+            }
+        },
+        "id": "521845",
+        "create_time": 1691566194,
+        "modify_time": 1713216648,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "✍️ Resume receiving data",
+        "opcode": "BLOCK_1713216604820",
+        "blockType": "command",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.resume();",
+                "_loop": ""
+            }
+        },
+        "id": "521846",
+        "create_time": 1691566161,
+        "modify_time": 1713216680,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "command",
+        "opcode": "BLOCK_1713216605004",
+        "blockType": "number",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "IrReceiver.decodedIRData.command",
+                "_loop": ""
+            }
+        },
+        "id": "521847",
+        "create_time": 1691566161,
+        "modify_time": 1691566161,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "protocol",
+        "opcode": "BLOCK_1713216605193",
+        "blockType": "string",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "lepton_ir_protocols_to_string(IrReceiver.decodedIRData.protocol)",
+                "_loop": ""
+            }
+        },
+        "id": "521848",
+        "create_time": 1691566194,
+        "modify_time": 1691566194,
+        "uid": 2276715
+    },
+    {
+        "eid": "31075",
+        "cid": "54396",
+        "name": "raw data",
+        "opcode": "BLOCK_1713216605384",
+        "blockType": "string",
+        "checkboxInFlyout": false,
+        "gap": 12,
+        "disableOnline": false,
+        "disableOffline": false,
+        "generatorCode": false,
+        "blockState": "incomplete",
+        "sort": 999,
+        "platform": [
+            "mblockpc",
+            "mblockweb"
+        ],
+        "hidden": false,
+        "handler": {
+            "onRun": "(args, app, device, block) => {\n  // JavaScript code\n}"
+        },
+        "codes": {
+            "arduinoc": {
+                "include": "",
+                "lib": "",
+                "declare": "",
+                "setup": "",
+                "code": "String(IrReceiver.decodedIRData.decodedRawData, HEX)",
+                "_loop": ""
+            }
+        },
+        "id": "521849",
+        "create_time": 1691566161,
+        "modify_time": 1691566161,
+        "uid": 2276715
+    }
+]

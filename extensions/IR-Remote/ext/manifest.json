@@ -1,0 +1,69 @@
+{
+    "id": "lepton_ir_remote",
+    "iconURL": "lepton_ir_remote/imgs/c3ae5abd_gamepad-solid.svg",
+    "coverURL": "./res/c3ae5abd_gamepad-solid.svg",
+    "name": {
+        "zh": "Lepton IR Remote",
+        "de": "Lepton IR Remote",
+        "es": "Lepton IR Remote",
+        "fr": "Lepton IR Remote",
+        "id": "Lepton IR Remote",
+        "ja": "Lepton IR Remote",
+        "ja-jph": "Lepton IR Remote",
+        "ko": "Lepton IR Remote",
+        "pl": "Lepton IR Remote",
+        "uk": "Lepton IR Remote",
+        "zh-hant": "Lepton IR Remote",
+        "nl": "Lepton IR Remote",
+        "it": "Lepton IR Remote",
+        "hr": "Lepton IR Remote",
+        "ru": "Lepton IR Remote",
+        "pt": "Lepton IR Remote",
+        "fi": "Lepton IR Remote",
+        "tr": "Lepton IR Remote",
+        "tk": "Lepton IR Remote",
+        "en": "Lepton IR Remote"
+    },
+    "description": {
+        "zh": "Receives infrared signals from a remote control.\n",
+        "de": "Receives infrared signals from a remote control.\n",
+        "es": "Receives infrared signals from a remote control.\n",
+        "fr": "Receives infrared signals from a remote control.\n",
+        "id": "Receives infrared signals from a remote control.\n",
+        "ja": "Receives infrared signals from a remote control.\n",
+        "ja-jph": "Receives infrared signals from a remote control.\n",
+        "ko": "Receives infrared signals from a remote control.\n",
+        "pl": "Receives infrared signals from a remote control.\n",
+        "uk": "Receives infrared signals from a remote control.\n",
+        "zh-hant": "Receives infrared signals from a remote control.\n",
+        "nl": "Receives infrared signals from a remote control.\n",
+        "it": "Receives infrared signals from a remote control.\n",
+        "hr": "Receives infrared signals from a remote control.\n",
+        "ru": "Receives infrared signals from a remote control.\n",
+        "pt": "Receives infrared signals from a remote control.\n",
+        "fi": "Receives infrared signals from a remote control.\n",
+        "tr": "Receives infrared signals from a remote control.\n",
+        "tk": "Receives infrared signals from a remote control.\n",
+        "en": "Receives infrared signals from a remote control.\n"
+    },
+    "targets": [
+        "arduino_uno",
+        "arduino_mega2560"
+    ],
+    "main": "lepton_ir_remote/index.js",
+    "codeTypes": [
+        "arduinoc"
+    ],
+    "device": false,
+    "sortId": 999,
+    "version": "0.0.0",
+    "extApiVersion": [],
+    "platform": [
+        "mblockpc",
+        "mblockweb"
+    ],
+    "homepage": "",
+    "feature": [
+        "worker"
+    ]
+}
