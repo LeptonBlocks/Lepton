@@ -1,0 +1,21 @@
+[
+    {
+        "eid": "31082",
+        "identify": "cate_135a2adc",
+        "name": "💫 LCD I2C",
+        "menuIconURI": {
+            "name": "desktop-solid.svg",
+            "url": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/custom/aeef3c51_desktop-solid.svg"
+        },
+        "blockIcon": {
+            "name": "desktop-solid (1).svg",
+            "url": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/custom/e54a98bd_desktop-solid (1).svg"
+        },
+        "colors": "#008080",
+        "id": "54390",
+        "sort": 999,
+        "create_time": 1691566161,
+        "modify_time": 1713216329,
+        "uid": 2276715
+    }
+]

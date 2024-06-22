@@ -1,0 +1,68 @@
+{
+    "id": "lepton_lcd_i2c",
+    "iconURL": "lepton_lcd_i2c/imgs/a47d492b_desktop-solid.svg",
+    "coverURL": "./res/a47d492b_desktop-solid.svg",
+    "name": {
+        "zh": "Lepton LCD I2C",
+        "de": "Lepton LCD I2C",
+        "es": "Lepton LCD I2C",
+        "fr": "Lepton LCD I2C",
+        "id": "Lepton LCD I2C",
+        "ja": "Lepton LCD I2C",
+        "ja-jph": "Lepton LCD I2C",
+        "ko": "Lepton LCD I2C",
+        "pl": "Lepton LCD I2C",
+        "uk": "Lepton LCD I2C",
+        "zh-hant": "Lepton LCD I2C",
+        "nl": "Lepton LCD I2C",
+        "it": "Lepton LCD I2C",
+        "hr": "Lepton LCD I2C",
+        "ru": "Lepton LCD I2C",
+        "pt": "Lepton LCD I2C",
+        "fi": "Lepton LCD I2C",
+        "tr": "Lepton LCD I2C",
+        "tk": "Lepton LCD I2C",
+        "en": "Lepton LCD I2C"
+    },
+    "description": {
+        "zh": "",
+        "de": "",
+        "es": "",
+        "fr": "",
+        "id": "",
+        "ja": "",
+        "ja-jph": "",
+        "ko": "",
+        "pl": "",
+        "uk": "",
+        "zh-hant": "",
+        "nl": "",
+        "it": "",
+        "hr": "",
+        "ru": "",
+        "pt": "",
+        "fi": "",
+        "tr": "",
+        "tk": "",
+        "en": ""
+    },
+    "targets": [
+        "arduino_uno"
+    ],
+    "main": "lepton_lcd_i2c/index.js",
+    "codeTypes": [
+        "arduinoc"
+    ],
+    "device": false,
+    "sortId": 999,
+    "version": "0.0.0",
+    "extApiVersion": [],
+    "platform": [
+        "mblockpc",
+        "mblockweb"
+    ],
+    "homepage": "",
+    "feature": [
+        "worker"
+    ]
+}
