@@ -86,9 +86,7 @@ const blocks = (extFacePanels) => ([{
         ],
         "codes": {
             "arduinoc": {
-                "sections": {
-                    "setup": `lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);`
-                }
+                "code": `lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);`
             }
         },
         "handler": this.funcs.BLOCK_1713210277889
@@ -112,9 +110,7 @@ const blocks = (extFacePanels) => ([{
         ],
         "codes": {
             "arduinoc": {
-                "sections": {
-                    "setup": `lepton_lcd.print(/*{string}*/);`
-                }
+                "code": `lepton_lcd.print(/*{string}*/);`
             }
         },
         "handler": this.funcs.BLOCK_1713210091134
@@ -142,9 +138,7 @@ const blocks = (extFacePanels) => ([{
         ],
         "codes": {
             "arduinoc": {
-                "sections": {
-                    "setup": `lepton_lcd.center(/*{row}*/-1, /*{string}*/);`
-                }
+                "code": `lepton_lcd.center(/*{row}*/-1, /*{string}*/);`
             }
         },
         "handler": this.funcs.BLOCK_1713210132755
@@ -176,9 +170,7 @@ const blocks = (extFacePanels) => ([{
         ],
         "codes": {
             "arduinoc": {
-                "sections": {
-                    "setup": `lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);`
-                }
+                "code": `lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);`
             }
         },
         "handler": this.funcs.BLOCK_1713210192368

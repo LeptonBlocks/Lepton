@@ -1,7 +1,7 @@
 {
     "id": "lepton_lcd_i2c",
-    "iconURL": "lepton_lcd_i2c/imgs/a47d492b_desktop-solid.svg",
-    "coverURL": "./res/a47d492b_desktop-solid.svg",
+    "iconURL": "lepton_lcd_i2c/imgs/18419d55_Bildschirmfoto 2024-06-29 um 19.35.40.png",
+    "coverURL": "./res/18419d55_Bildschirmfoto 2024-06-29 um 19.35.40.png",
     "name": {
         "zh": "Lepton LCD I2C",
         "de": "Lepton LCD I2C",
@@ -25,26 +25,26 @@
         "en": "Lepton LCD I2C"
     },
     "description": {
-        "zh": "",
-        "de": "",
-        "es": "",
-        "fr": "",
-        "id": "",
-        "ja": "",
-        "ja-jph": "",
-        "ko": "",
-        "pl": "",
-        "uk": "",
-        "zh-hant": "",
-        "nl": "",
-        "it": "",
-        "hr": "",
-        "ru": "",
-        "pt": "",
-        "fi": "",
-        "tr": "",
-        "tk": "",
-        "en": ""
+        "zh": "Controls an I2C LCD display.",
+        "de": "Controls an I2C LCD display.",
+        "es": "Controls an I2C LCD display.",
+        "fr": "Controls an I2C LCD display.",
+        "id": "Controls an I2C LCD display.",
+        "ja": "Controls an I2C LCD display.",
+        "ja-jph": "Controls an I2C LCD display.",
+        "ko": "Controls an I2C LCD display.",
+        "pl": "Controls an I2C LCD display.",
+        "uk": "Controls an I2C LCD display.",
+        "zh-hant": "Controls an I2C LCD display.",
+        "nl": "Controls an I2C LCD display.",
+        "it": "Controls an I2C LCD display.",
+        "hr": "Controls an I2C LCD display.",
+        "ru": "Controls an I2C LCD display.",
+        "pt": "Controls an I2C LCD display.",
+        "fi": "Controls an I2C LCD display.",
+        "tr": "Controls an I2C LCD display.",
+        "tk": "Controls an I2C LCD display.",
+        "en": "Controls an I2C LCD display."
     },
     "targets": [
         "arduino_uno"
@@ -55,13 +55,13 @@
     ],
     "device": false,
     "sortId": 999,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "extApiVersion": [],
     "platform": [
         "mblockpc",
         "mblockweb"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
     "feature": [
         "worker"
     ]

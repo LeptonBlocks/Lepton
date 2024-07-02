@@ -609,7 +609,7 @@
     "zh": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -670,7 +670,7 @@
     "de": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -731,7 +731,7 @@
     "es": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -792,7 +792,7 @@
     "fr": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -853,7 +853,7 @@
     "id": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -914,7 +914,7 @@
     "ja": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -975,7 +975,7 @@
     "ja-jph": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1036,7 +1036,7 @@
     "ko": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1097,7 +1097,7 @@
     "pl": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1158,7 +1158,7 @@
     "uk": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1219,7 +1219,7 @@
     "zh-hant": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1280,7 +1280,7 @@
     "nl": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1341,7 +1341,7 @@
     "it": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1402,7 +1402,7 @@
     "hr": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1463,7 +1463,7 @@
     "ru": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1524,7 +1524,7 @@
     "pt": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1585,7 +1585,7 @@
     "fi": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1646,7 +1646,7 @@
     "tr": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1707,7 +1707,7 @@
     "tk": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -1768,7 +1768,7 @@
     "en": {
       "lepton_lcd_i2c": "Lepton LCD I2C",
       "extensionName": "Lepton LCD I2C",
-      "extensionDescription": "",
+      "extensionDescription": "Controls an I2C LCD display.",
       "BLOCK_1713207948139_PORT_0": "0x20",
       "BLOCK_1713207948139_PORT_1": "0x27",
       "BLOCK_1713207948139_PORT_2": "0x30",
@@ -2154,7 +2154,7 @@ void loop() {
           }
         }],
         "codeTypes": ["arduinoc"],
-        "version": "0.0.0",
+        "version": "0.0.1",
         "platform": ["mblockpc", "mblockweb"],
         "categories": [{
           "name": "cate_135a2adc",
@@ -2240,9 +2240,7 @@ void loop() {
             "platform": ["mblockpc", "mblockweb"],
             "codes": {
               "arduinoc": {
-                "sections": {
-                  "setup": `lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);`
-                }
+                "code": `lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);`
               }
             },
             "handler": this.funcs.BLOCK_1713210277889
@@ -2262,9 +2260,7 @@ void loop() {
             "platform": ["mblockpc", "mblockweb"],
             "codes": {
               "arduinoc": {
-                "sections": {
-                  "setup": `lepton_lcd.print(/*{string}*/);`
-                }
+                "code": `lepton_lcd.print(/*{string}*/);`
               }
             },
             "handler": this.funcs.BLOCK_1713210091134
@@ -2288,9 +2284,7 @@ void loop() {
             "platform": ["mblockpc", "mblockweb"],
             "codes": {
               "arduinoc": {
-                "sections": {
-                  "setup": `lepton_lcd.center(/*{row}*/-1, /*{string}*/);`
-                }
+                "code": `lepton_lcd.center(/*{row}*/-1, /*{string}*/);`
               }
             },
             "handler": this.funcs.BLOCK_1713210132755
@@ -2318,9 +2312,7 @@ void loop() {
             "platform": ["mblockpc", "mblockweb"],
             "codes": {
               "arduinoc": {
-                "sections": {
-                  "setup": `lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);`
-                }
+                "code": `lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);`
               }
             },
             "handler": this.funcs.BLOCK_1713210192368

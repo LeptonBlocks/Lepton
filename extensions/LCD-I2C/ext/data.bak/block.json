@@ -225,13 +225,13 @@
                 "include": "",
                 "lib": "",
                 "declare": "",
-                "setup": "lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);",
-                "code": "",
+                "setup": "",
+                "code": "lepton_lcd.setCursor(/*{column}*/-1, /*{row}*/-1);",
                 "_loop": ""
             }
         },
         "create_time": 1692637961,
-        "modify_time": 1713216443,
+        "modify_time": 1719681253,
         "uid": 2276715
     },
     {
@@ -269,13 +269,13 @@
                 "include": "",
                 "lib": "",
                 "declare": "",
-                "setup": "lepton_lcd.print(/*{string}*/);",
-                "code": "",
+                "setup": "",
+                "code": "lepton_lcd.print(/*{string}*/);",
                 "_loop": ""
             }
         },
         "create_time": 1691566161,
-        "modify_time": 1713216452,
+        "modify_time": 1719681229,
         "uid": 2276715
     },
     {
@@ -318,13 +318,13 @@
                 "include": "",
                 "lib": "",
                 "declare": "",
-                "setup": "lepton_lcd.center(/*{row}*/-1, /*{string}*/);",
-                "code": "",
+                "setup": "",
+                "code": "lepton_lcd.center(/*{row}*/-1, /*{string}*/);",
                 "_loop": ""
             }
         },
         "create_time": 1691566194,
-        "modify_time": 1713216458,
+        "modify_time": 1719681242,
         "uid": 2276715
     },
     {
@@ -372,13 +372,13 @@
                 "include": "",
                 "lib": "",
                 "declare": "",
-                "setup": "lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);",
-                "code": "",
+                "setup": "",
+                "code": "lepton_lcd.right(/*{column}*/, /*{row}*/-1, /*{string}*/);",
                 "_loop": ""
             }
         },
         "create_time": 1691566194,
-        "modify_time": 1713216465,
+        "modify_time": 1719681288,
         "uid": 2276715
     },
     {

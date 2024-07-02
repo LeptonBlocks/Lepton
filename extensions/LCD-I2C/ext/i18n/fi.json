@@ -1,7 +1,7 @@
 {
     "lepton_lcd_i2c": "Lepton LCD I2C",
     "extensionName": "Lepton LCD I2C",
-    "extensionDescription": "",
+    "extensionDescription": "Controls an I2C LCD display.",
     "BLOCK_1713207948139_PORT_0": "0x20",
     "BLOCK_1713207948139_PORT_1": "0x27",
     "BLOCK_1713207948139_PORT_2": "0x30",

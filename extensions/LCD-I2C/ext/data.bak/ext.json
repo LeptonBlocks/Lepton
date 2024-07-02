@@ -1,13 +1,13 @@
 {
     "device": false,
     "identify": "lepton_lcd_i2c",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "name": "Lepton LCD I2C",
-    "description": "",
-    "homepage": "",
+    "description": "Controls an I2C LCD display.",
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
     "cover": {
-        "name": "desktop-solid.svg",
-        "url": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/custom/a47d492b_desktop-solid.svg"
+        "name": "Bildschirmfoto 2024-06-29 um 19.35.40.png",
+        "url": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/custom/18419d55_Bildschirmfoto 2024-06-29 um 19.35.40.png"
     },
     "platform": [
         "mblockpc",
