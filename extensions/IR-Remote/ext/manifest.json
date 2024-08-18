@@ -4,6 +4,7 @@
     "coverURL": "./res/c3ae5abd_gamepad-solid.svg",
     "name": {
         "zh": "Lepton IR Remote",
+        "en": "Lepton IR Remote",
         "de": "Lepton IR Remote",
         "es": "Lepton IR Remote",
         "fr": "Lepton IR Remote",
@@ -21,12 +22,12 @@
         "pt": "Lepton IR Remote",
         "fi": "Lepton IR Remote",
         "tr": "Lepton IR Remote",
-        "tk": "Lepton IR Remote",
-        "en": "Lepton IR Remote"
+        "tk": "Lepton IR Remote"
     },
     "description": {
         "zh": "Receives infrared signals from a remote control.\n",
-        "de": "Receives infrared signals from a remote control.\n",
+        "en": "Receives infrared signals from a remote control.",
+        "de": "Empfängt Infrarotsignale von einer Fernbedienung.",
         "es": "Receives infrared signals from a remote control.\n",
         "fr": "Receives infrared signals from a remote control.\n",
         "id": "Receives infrared signals from a remote control.\n",
@@ -43,8 +44,7 @@
         "pt": "Receives infrared signals from a remote control.\n",
         "fi": "Receives infrared signals from a remote control.\n",
         "tr": "Receives infrared signals from a remote control.\n",
-        "tk": "Receives infrared signals from a remote control.\n",
-        "en": "Receives infrared signals from a remote control.\n"
+        "tk": "Receives infrared signals from a remote control.\n"
     },
     "targets": [
         "arduino_uno",
@@ -56,13 +56,13 @@
     ],
     "device": false,
     "sortId": 999,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "extApiVersion": [],
     "platform": [
         "mblockpc",
         "mblockweb"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
     "feature": [
         "worker"
     ]
