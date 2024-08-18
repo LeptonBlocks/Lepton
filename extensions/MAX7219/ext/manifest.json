@@ -4,6 +4,7 @@
     "coverURL": "./res/5e983498_extension.svg",
     "name": {
         "zh": "Lepton MAX7219",
+        "en": "Lepton MAX7219",
         "de": "Lepton MAX7219",
         "es": "Lepton MAX7219",
         "fr": "Lepton MAX7219",
@@ -21,12 +22,12 @@
         "pt": "Lepton MAX7219",
         "fi": "Lepton MAX7219",
         "tr": "Lepton MAX7219",
-        "tk": "Lepton MAX7219",
-        "en": "Lepton MAX7219"
+        "tk": "Lepton MAX7219"
     },
     "description": {
         "zh": "Controls one or multiple LED matrix displays.",
-        "de": "Controls one or multiple LED matrix displays.",
+        "en": "Controls one or multiple LED matrix displays.",
+        "de": "Steuert eine oder mehrere LED-Matrix-Anzeigen.",
         "es": "Controls one or multiple LED matrix displays.",
         "fr": "Controls one or multiple LED matrix displays.",
         "id": "Controls one or multiple LED matrix displays.",
@@ -43,8 +44,7 @@
         "pt": "Controls one or multiple LED matrix displays.",
         "fi": "Controls one or multiple LED matrix displays.",
         "tr": "Controls one or multiple LED matrix displays.",
-        "tk": "Controls one or multiple LED matrix displays.",
-        "en": "Controls one or multiple LED matrix displays."
+        "tk": "Controls one or multiple LED matrix displays."
     },
     "targets": [
         "arduino_uno"
@@ -55,13 +55,13 @@
     ],
     "device": false,
     "sortId": 999,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "extApiVersion": [],
     "platform": [
         "mblockpc",
         "mblockweb"
     ],
-    "homepage": "",
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
     "feature": [
         "worker"
     ]

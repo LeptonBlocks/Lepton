@@ -1,4 +1,5 @@
 import zh from './zh.js';
+import en from './en.js';
 import de from './de.js';
 import es from './es.js';
 import fr from './fr.js';
@@ -17,10 +18,10 @@ import pt from './pt.js';
 import fi from './fi.js';
 import tr from './tr.js';
 import tk from './tk.js';
-import en from './en.js';
 
 const langs = {
     'zh': zh,
+    'en': en,
     'de': de,
     'es': es,
     'fr': fr,
@@ -38,8 +39,7 @@ const langs = {
     'pt': pt,
     'fi': fi,
     'tr': tr,
-    'tk': tk,
-    'en': en
+    'tk': tk
 };
 
 export default langs;

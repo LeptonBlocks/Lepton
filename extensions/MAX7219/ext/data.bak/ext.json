@@ -1,10 +1,10 @@
 {
     "device": false,
     "identify": "lepton_max7219",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "name": "Lepton MAX7219",
     "description": "Controls one or multiple LED matrix displays.",
-    "homepage": "",
+    "homepage": "https://github.com/LeptonBlocks/Lepton",
     "cover": {
         "name": "extension.svg",
         "url": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/custom/5e983498_extension.svg"
@@ -39,7 +39,7 @@
             ]
         }
     },
-    "main": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/previewJs/lepton_max7219__413_2276715.js",
+    "main": "https://storage-eu.mblock.cc/ext-eu/extlist/prod/previewJs/lepton_max7219__1_2276715.js",
     "originVersion": "0.0.3",
     "id": "32357"
 }
